@@ -1,3 +1,6 @@
+import json
+
+
 class HashSet:
 
     def __init__(self, size=10):
@@ -74,12 +77,19 @@ class HashMap:
 
     def mostrar(self):
         for i in range(self.size):
-            print(i, ":", self.buckets[i])
+            print(str(self.buckets[i]))
 
 class Pokemon:
     def __init__(self, id, nombre, tipo, poder_combate):
         self.id = id
         self.nombre = nombre
         self.tipo = tipo
-        self.poder_combate = poder_combate
+        self.poder_combate = poder_combate  
+
+    def __str__(self):
+        return f"{self.id}: nombre: {self.nombre} - tipo: {self.tipo} - pc: {self.poder_combate}"   
+
+    def __repr__(self):
+        return f"| id: {self.id} - nombre: {self.nombre} - tipo: {self.tipo} - pc: {self.poder_combate}"
+
         

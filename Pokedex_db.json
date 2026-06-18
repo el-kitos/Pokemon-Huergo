@@ -1,0 +1,92 @@
+{
+  "1": {
+    "id": 1,
+    "nombre": "Bulbasaur",
+    "tipo": "Planta",
+    "poder_combate": 318
+  },
+  "2": {
+    "id": 2,
+    "nombre": "Ivysaur",
+    "tipo": "Planta",
+    "poder_combate": 405
+  },
+  "3": {
+    "id": 3,
+    "nombre": "Venusaur",
+    "tipo": "Planta",
+    "poder_combate": 525
+  },
+  "4": {
+    "id": 4,
+    "nombre": "Charmander",
+    "tipo": "Fuego",
+    "poder_combate": 309
+  },
+  "5": {
+    "id": 5,
+    "nombre": "Charmeleon",
+    "tipo": "Fuego",
+    "poder_combate": 405
+  },
+  "6": {
+    "id": 6,
+    "nombre": "Charizard",
+    "tipo": "Fuego",
+    "poder_combate": 534
+  },
+  "7": {
+    "id": 7,
+    "nombre": "Squirtle",
+    "tipo": "Agua",
+    "poder_combate": 314
+  },
+  "8": {
+    "id": 8,
+    "nombre": "Wartortle",
+    "tipo": "Agua",
+    "poder_combate": 405
+  },
+  "9": {
+    "id": 9,
+    "nombre": "Blastoise",
+    "tipo": "Agua",
+    "poder_combate": 530
+  },
+  "10": {
+    "id": 10,
+    "nombre": "Pikachu",
+    "tipo": "Electrico",
+    "poder_combate": 320
+  },
+  "11": {
+    "id": 11,
+    "nombre": "Raichu",
+    "tipo": "Electrico",
+    "poder_combate": 485
+  },
+  "12": {
+    "id": 12,
+    "nombre": "Jigglypuff",
+    "tipo": "Normal",
+    "poder_combate": 270
+  },
+  "13": {
+    "id": 13,
+    "nombre": "Meowth",
+    "tipo": "Normal",
+    "poder_combate": 290
+  },
+  "14": {
+    "id": 14,
+    "nombre": "Machop",
+    "tipo": "Lucha",
+    "poder_combate": 305
+  },
+  "15": {
+    "id": 15,
+    "nombre": "Gengar",
+    "tipo": "Fantasma",
+    "poder_combate": 500
+  }
+}
