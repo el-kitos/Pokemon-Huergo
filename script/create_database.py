@@ -2,9 +2,9 @@ from clases import HashMap, Pokemon, HashSet
 import json
 
 
-def crear_pokedex_data():
+def create_pokedex_data():
     pokedex_nacional = HashMap(size =150)
-    with open("Pokedex_db.json", "r") as archivo:
+    with open("script/Pokedex_db.json", "r") as archivo:
         data = json.load(archivo)
     
     for dato in data.values():
@@ -13,13 +13,20 @@ def crear_pokedex_data():
 
     return pokedex_nacional
 
-def crear_medallas_data():
-    medallas = HashSet(size=8)
-    
+def create_medals_data():
+    medallas_obtenidas = HashSet(size=8)
+
+    with open("script/Medals_db.json") as archivo:
+        data = json.load(archivo)
+
+    medallas_obtenidas.agregar(data[0])
+    medallas_obtenidas.agregar(data[1])
+
+    return medallas_obtenidas
 
 def main():
-    pokedex_nacional = crear_pokedex_data()
-
-
+    pokedex_nacional = create_pokedex_data()
+    medallas_obtenidas = create_medals_data()
+    
 
 main()

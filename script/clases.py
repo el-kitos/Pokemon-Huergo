@@ -79,6 +79,194 @@ class HashMap:
         for i in range(self.size):
             print(str(self.buckets[i]))
 
+
+class Nodo:
+    def __init__(self, dato):
+        self.dato = dato
+        self.siguiente = None
+
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.cabeza = None
+
+    # Agregar un nodo al final
+    def agregar(self, dato):
+        nuevo = Nodo(dato)
+
+        if self.cabeza is None:
+            self.cabeza = nuevo
+            return
+
+        actual = self.cabeza
+        while actual.siguiente:
+            actual = actual.siguiente
+
+        actual.siguiente = nuevo
+
+    # Buscar un nodo
+    def buscar(self, dato):
+        actual = self.cabeza
+
+        while actual:
+            if actual.dato == dato:
+                return True
+            actual = actual.siguiente
+
+        return False
+
+    # Eliminar un nodo
+    def eliminar(self, dato):
+        if self.cabeza is None:
+            return
+
+        if self.cabeza.dato == dato:
+            self.cabeza = self.cabeza.siguiente
+            return
+
+        actual = self.cabeza
+
+        while actual.siguiente:
+            if actual.siguiente.dato == dato:
+                actual.siguiente = actual.siguiente.siguiente
+                return
+            actual = actual.siguiente
+
+    # Recorrer e imprimir la lista
+    def imprimir(self):
+        actual = self.cabeza
+
+        while actual:
+            print(actual.dato, end=" -> ")
+            actual = actual.siguiente
+
+        print("None")
+
+    # Devolver el tamaño de la lista
+    def tamaño(self):
+        contador = 0
+        actual = self.cabeza
+
+        while actual:
+            contador += 1
+            actual = actual.siguiente
+
+        return contador
+
+    # Chequear si está vacía
+    def esta_vacia(self):
+        return self.cabeza is None
+
+    # Ordenar de menor a mayor (Bubble Sort)
+    def ordenar(self):
+        if self.cabeza is None:
+            return
+
+        cambiado = True
+
+        while cambiado:
+            cambiado = False
+            actual = self.cabeza
+
+            while actual.siguiente:
+                if actual.dato > actual.siguiente.dato:
+                    actual.dato, actual.siguiente.dato = (
+                        actual.siguiente.dato,
+                        actual.dato
+                    )
+                    cambiado = True
+
+                actual = actual.siguiente
+
+    # Invertir la lista (cambiando punteros)
+    def invertir(self):
+        anterior = None
+        actual = self.cabeza
+
+        while actual:
+            siguiente = actual.siguiente
+            actual.siguiente = anterior
+            anterior = actual
+            actual = siguiente
+
+        self.cabeza = anterior
+
+    # Detectar si hay un ciclo (Floyd tortuga y liebre)
+    def tiene_ciclo(self):
+        tortuga = self.cabeza
+        liebre = self.cabeza
+
+        while liebre and liebre.siguiente:
+            tortuga = tortuga.siguiente
+            liebre = liebre.siguiente.siguiente
+
+            if tortuga == liebre:
+                return True
+
+        return False
+    def insertar_despues_de(self, dato_objetivo, nuevo_dato):
+        actual = self.cabeza
+
+        while actual:
+            if actual.dato == dato_objetivo:
+                nuevo = Nodo(nuevo_dato)
+                nuevo.siguiente = actual.siguiente
+                actual.siguiente = nuevo
+                return True
+            actual = actual.siguiente
+
+        return False
+
+
+class Queue:
+    def __init__(self):
+        self.queue = []
+    
+    def enqueue(self, item):
+        self.queue.append(item)
+    
+    def dequeue(self):
+        self.queue.pop(0)
+    
+    def peek(self):
+        print("Peek: ", self.queue[0])
+    
+    def isEmpty(self):
+        if not self.queue:
+            print("True")
+        else:
+            print("False")
+    
+    def size(self):
+        print(len(self.queue))
+    
+        
+class Stack:
+    def __init__(self):
+        self.stack = []
+    
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        self.stack.pop()
+    
+    def peek(self):
+        print(self.stack[-1])
+    
+    def isEmpty(self):
+        if not self.stack:
+            print("True")
+        else:
+            print("False")
+    
+    def size(self):
+        return len(self.stack)
+    
+    def transfer(S, T):
+        while not S.isEmpty():
+            T.push(S.pop())
+        
 class Pokemon:
     def __init__(self, id, nombre, tipo, poder_combate):
         self.id = id
