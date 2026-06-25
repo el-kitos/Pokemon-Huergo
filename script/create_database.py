@@ -21,7 +21,7 @@ def create_medals_data():
 
     medallas_obtenidas.agregar(data[0])
     medallas_obtenidas.agregar(data[1])
-
+    
     return medallas_obtenidas
 
 def main():
