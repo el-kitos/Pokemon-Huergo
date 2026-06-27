@@ -88,5 +88,821 @@
     "nombre": "Gengar",
     "tipo": "Fantasma",
     "poder_combate": 500
+  },
+  "16": {
+    "id": 16,
+    "nombre": "Pokemon16",
+    "tipo": "Normal",
+    "poder_combate": 316
+  },
+  "17": {
+    "id": 17,
+    "nombre": "Pokemon17",
+    "tipo": "Normal",
+    "poder_combate": 317
+  },
+  "18": {
+    "id": 18,
+    "nombre": "Pokemon18",
+    "tipo": "Normal",
+    "poder_combate": 318
+  },
+  "19": {
+    "id": 19,
+    "nombre": "Pokemon19",
+    "tipo": "Normal",
+    "poder_combate": 319
+  },
+  "20": {
+    "id": 20,
+    "nombre": "Pokemon20",
+    "tipo": "Normal",
+    "poder_combate": 320
+  },
+  "21": {
+    "id": 21,
+    "nombre": "Pokemon21",
+    "tipo": "Normal",
+    "poder_combate": 321
+  },
+  "22": {
+    "id": 22,
+    "nombre": "Pokemon22",
+    "tipo": "Normal",
+    "poder_combate": 322
+  },
+  "23": {
+    "id": 23,
+    "nombre": "Pokemon23",
+    "tipo": "Normal",
+    "poder_combate": 323
+  },
+  "24": {
+    "id": 24,
+    "nombre": "Pokemon24",
+    "tipo": "Normal",
+    "poder_combate": 324
+  },
+  "25": {
+    "id": 25,
+    "nombre": "Pokemon25",
+    "tipo": "Normal",
+    "poder_combate": 325
+  },
+  "26": {
+    "id": 26,
+    "nombre": "Pokemon26",
+    "tipo": "Normal",
+    "poder_combate": 326
+  },
+  "27": {
+    "id": 27,
+    "nombre": "Pokemon27",
+    "tipo": "Normal",
+    "poder_combate": 327
+  },
+  "28": {
+    "id": 28,
+    "nombre": "Pokemon28",
+    "tipo": "Normal",
+    "poder_combate": 328
+  },
+  "29": {
+    "id": 29,
+    "nombre": "Pokemon29",
+    "tipo": "Normal",
+    "poder_combate": 329
+  },
+  "30": {
+    "id": 30,
+    "nombre": "Pokemon30",
+    "tipo": "Normal",
+    "poder_combate": 330
+  },
+  "31": {
+    "id": 31,
+    "nombre": "Pokemon31",
+    "tipo": "Normal",
+    "poder_combate": 331
+  },
+  "32": {
+    "id": 32,
+    "nombre": "Pokemon32",
+    "tipo": "Normal",
+    "poder_combate": 332
+  },
+  "33": {
+    "id": 33,
+    "nombre": "Pokemon33",
+    "tipo": "Normal",
+    "poder_combate": 333
+  },
+  "34": {
+    "id": 34,
+    "nombre": "Pokemon34",
+    "tipo": "Normal",
+    "poder_combate": 334
+  },
+  "35": {
+    "id": 35,
+    "nombre": "Pokemon35",
+    "tipo": "Normal",
+    "poder_combate": 335
+  },
+  "36": {
+    "id": 36,
+    "nombre": "Pokemon36",
+    "tipo": "Normal",
+    "poder_combate": 336
+  },
+  "37": {
+    "id": 37,
+    "nombre": "Pokemon37",
+    "tipo": "Normal",
+    "poder_combate": 337
+  },
+  "38": {
+    "id": 38,
+    "nombre": "Pokemon38",
+    "tipo": "Normal",
+    "poder_combate": 338
+  },
+  "39": {
+    "id": 39,
+    "nombre": "Pokemon39",
+    "tipo": "Normal",
+    "poder_combate": 339
+  },
+  "40": {
+    "id": 40,
+    "nombre": "Pokemon40",
+    "tipo": "Normal",
+    "poder_combate": 340
+  },
+  "41": {
+    "id": 41,
+    "nombre": "Pokemon41",
+    "tipo": "Normal",
+    "poder_combate": 341
+  },
+  "42": {
+    "id": 42,
+    "nombre": "Pokemon42",
+    "tipo": "Normal",
+    "poder_combate": 342
+  },
+  "43": {
+    "id": 43,
+    "nombre": "Pokemon43",
+    "tipo": "Normal",
+    "poder_combate": 343
+  },
+  "44": {
+    "id": 44,
+    "nombre": "Pokemon44",
+    "tipo": "Normal",
+    "poder_combate": 344
+  },
+  "45": {
+    "id": 45,
+    "nombre": "Pokemon45",
+    "tipo": "Normal",
+    "poder_combate": 345
+  },
+  "46": {
+    "id": 46,
+    "nombre": "Pokemon46",
+    "tipo": "Normal",
+    "poder_combate": 346
+  },
+  "47": {
+    "id": 47,
+    "nombre": "Pokemon47",
+    "tipo": "Normal",
+    "poder_combate": 347
+  },
+  "48": {
+    "id": 48,
+    "nombre": "Pokemon48",
+    "tipo": "Normal",
+    "poder_combate": 348
+  },
+  "49": {
+    "id": 49,
+    "nombre": "Pokemon49",
+    "tipo": "Normal",
+    "poder_combate": 349
+  },
+  "50": {
+    "id": 50,
+    "nombre": "Pokemon50",
+    "tipo": "Normal",
+    "poder_combate": 350
+  },
+  "51": {
+    "id": 51,
+    "nombre": "Pokemon51",
+    "tipo": "Normal",
+    "poder_combate": 351
+  },
+  "52": {
+    "id": 52,
+    "nombre": "Pokemon52",
+    "tipo": "Normal",
+    "poder_combate": 352
+  },
+  "53": {
+    "id": 53,
+    "nombre": "Pokemon53",
+    "tipo": "Normal",
+    "poder_combate": 353
+  },
+  "54": {
+    "id": 54,
+    "nombre": "Pokemon54",
+    "tipo": "Normal",
+    "poder_combate": 354
+  },
+  "55": {
+    "id": 55,
+    "nombre": "Pokemon55",
+    "tipo": "Normal",
+    "poder_combate": 355
+  },
+  "56": {
+    "id": 56,
+    "nombre": "Pokemon56",
+    "tipo": "Normal",
+    "poder_combate": 356
+  },
+  "57": {
+    "id": 57,
+    "nombre": "Pokemon57",
+    "tipo": "Normal",
+    "poder_combate": 357
+  },
+  "58": {
+    "id": 58,
+    "nombre": "Pokemon58",
+    "tipo": "Normal",
+    "poder_combate": 358
+  },
+  "59": {
+    "id": 59,
+    "nombre": "Pokemon59",
+    "tipo": "Normal",
+    "poder_combate": 359
+  },
+  "60": {
+    "id": 60,
+    "nombre": "Pokemon60",
+    "tipo": "Normal",
+    "poder_combate": 360
+  },
+  "61": {
+    "id": 61,
+    "nombre": "Pokemon61",
+    "tipo": "Normal",
+    "poder_combate": 361
+  },
+  "62": {
+    "id": 62,
+    "nombre": "Pokemon62",
+    "tipo": "Normal",
+    "poder_combate": 362
+  },
+  "63": {
+    "id": 63,
+    "nombre": "Pokemon63",
+    "tipo": "Normal",
+    "poder_combate": 363
+  },
+  "64": {
+    "id": 64,
+    "nombre": "Pokemon64",
+    "tipo": "Normal",
+    "poder_combate": 364
+  },
+  "65": {
+    "id": 65,
+    "nombre": "Pokemon65",
+    "tipo": "Normal",
+    "poder_combate": 365
+  },
+  "66": {
+    "id": 66,
+    "nombre": "Pokemon66",
+    "tipo": "Normal",
+    "poder_combate": 366
+  },
+  "67": {
+    "id": 67,
+    "nombre": "Pokemon67",
+    "tipo": "Normal",
+    "poder_combate": 367
+  },
+  "68": {
+    "id": 68,
+    "nombre": "Pokemon68",
+    "tipo": "Normal",
+    "poder_combate": 368
+  },
+  "69": {
+    "id": 69,
+    "nombre": "Pokemon69",
+    "tipo": "Normal",
+    "poder_combate": 369
+  },
+  "70": {
+    "id": 70,
+    "nombre": "Pokemon70",
+    "tipo": "Normal",
+    "poder_combate": 370
+  },
+  "71": {
+    "id": 71,
+    "nombre": "Pokemon71",
+    "tipo": "Normal",
+    "poder_combate": 371
+  },
+  "72": {
+    "id": 72,
+    "nombre": "Pokemon72",
+    "tipo": "Normal",
+    "poder_combate": 372
+  },
+  "73": {
+    "id": 73,
+    "nombre": "Pokemon73",
+    "tipo": "Normal",
+    "poder_combate": 373
+  },
+  "74": {
+    "id": 74,
+    "nombre": "Pokemon74",
+    "tipo": "Normal",
+    "poder_combate": 374
+  },
+  "75": {
+    "id": 75,
+    "nombre": "Pokemon75",
+    "tipo": "Normal",
+    "poder_combate": 375
+  },
+  "76": {
+    "id": 76,
+    "nombre": "Pokemon76",
+    "tipo": "Normal",
+    "poder_combate": 376
+  },
+  "77": {
+    "id": 77,
+    "nombre": "Pokemon77",
+    "tipo": "Normal",
+    "poder_combate": 377
+  },
+  "78": {
+    "id": 78,
+    "nombre": "Pokemon78",
+    "tipo": "Normal",
+    "poder_combate": 378
+  },
+  "79": {
+    "id": 79,
+    "nombre": "Pokemon79",
+    "tipo": "Normal",
+    "poder_combate": 379
+  },
+  "80": {
+    "id": 80,
+    "nombre": "Pokemon80",
+    "tipo": "Normal",
+    "poder_combate": 380
+  },
+  "81": {
+    "id": 81,
+    "nombre": "Pokemon81",
+    "tipo": "Normal",
+    "poder_combate": 381
+  },
+  "82": {
+    "id": 82,
+    "nombre": "Pokemon82",
+    "tipo": "Normal",
+    "poder_combate": 382
+  },
+  "83": {
+    "id": 83,
+    "nombre": "Pokemon83",
+    "tipo": "Normal",
+    "poder_combate": 383
+  },
+  "84": {
+    "id": 84,
+    "nombre": "Pokemon84",
+    "tipo": "Normal",
+    "poder_combate": 384
+  },
+  "85": {
+    "id": 85,
+    "nombre": "Pokemon85",
+    "tipo": "Normal",
+    "poder_combate": 385
+  },
+  "86": {
+    "id": 86,
+    "nombre": "Pokemon86",
+    "tipo": "Normal",
+    "poder_combate": 386
+  },
+  "87": {
+    "id": 87,
+    "nombre": "Pokemon87",
+    "tipo": "Normal",
+    "poder_combate": 387
+  },
+  "88": {
+    "id": 88,
+    "nombre": "Pokemon88",
+    "tipo": "Normal",
+    "poder_combate": 388
+  },
+  "89": {
+    "id": 89,
+    "nombre": "Pokemon89",
+    "tipo": "Normal",
+    "poder_combate": 389
+  },
+  "90": {
+    "id": 90,
+    "nombre": "Pokemon90",
+    "tipo": "Normal",
+    "poder_combate": 390
+  },
+  "91": {
+    "id": 91,
+    "nombre": "Pokemon91",
+    "tipo": "Normal",
+    "poder_combate": 391
+  },
+  "92": {
+    "id": 92,
+    "nombre": "Pokemon92",
+    "tipo": "Normal",
+    "poder_combate": 392
+  },
+  "93": {
+    "id": 93,
+    "nombre": "Pokemon93",
+    "tipo": "Normal",
+    "poder_combate": 393
+  },
+  "94": {
+    "id": 94,
+    "nombre": "Pokemon94",
+    "tipo": "Normal",
+    "poder_combate": 394
+  },
+  "95": {
+    "id": 95,
+    "nombre": "Pokemon95",
+    "tipo": "Normal",
+    "poder_combate": 395
+  },
+  "96": {
+    "id": 96,
+    "nombre": "Pokemon96",
+    "tipo": "Normal",
+    "poder_combate": 396
+  },
+  "97": {
+    "id": 97,
+    "nombre": "Pokemon97",
+    "tipo": "Normal",
+    "poder_combate": 397
+  },
+  "98": {
+    "id": 98,
+    "nombre": "Pokemon98",
+    "tipo": "Normal",
+    "poder_combate": 398
+  },
+  "99": {
+    "id": 99,
+    "nombre": "Pokemon99",
+    "tipo": "Normal",
+    "poder_combate": 399
+  },
+  "100": {
+    "id": 100,
+    "nombre": "Pokemon100",
+    "tipo": "Normal",
+    "poder_combate": 400
+  },
+  "101": {
+    "id": 101,
+    "nombre": "Pokemon101",
+    "tipo": "Normal",
+    "poder_combate": 401
+  },
+  "102": {
+    "id": 102,
+    "nombre": "Pokemon102",
+    "tipo": "Normal",
+    "poder_combate": 402
+  },
+  "103": {
+    "id": 103,
+    "nombre": "Pokemon103",
+    "tipo": "Normal",
+    "poder_combate": 403
+  },
+  "104": {
+    "id": 104,
+    "nombre": "Pokemon104",
+    "tipo": "Normal",
+    "poder_combate": 404
+  },
+  "105": {
+    "id": 105,
+    "nombre": "Pokemon105",
+    "tipo": "Normal",
+    "poder_combate": 405
+  },
+  "106": {
+    "id": 106,
+    "nombre": "Pokemon106",
+    "tipo": "Normal",
+    "poder_combate": 406
+  },
+  "107": {
+    "id": 107,
+    "nombre": "Pokemon107",
+    "tipo": "Normal",
+    "poder_combate": 407
+  },
+  "108": {
+    "id": 108,
+    "nombre": "Pokemon108",
+    "tipo": "Normal",
+    "poder_combate": 408
+  },
+  "109": {
+    "id": 109,
+    "nombre": "Pokemon109",
+    "tipo": "Normal",
+    "poder_combate": 409
+  },
+  "110": {
+    "id": 110,
+    "nombre": "Pokemon110",
+    "tipo": "Normal",
+    "poder_combate": 410
+  },
+  "111": {
+    "id": 111,
+    "nombre": "Pokemon111",
+    "tipo": "Normal",
+    "poder_combate": 411
+  },
+  "112": {
+    "id": 112,
+    "nombre": "Pokemon112",
+    "tipo": "Normal",
+    "poder_combate": 412
+  },
+  "113": {
+    "id": 113,
+    "nombre": "Pokemon113",
+    "tipo": "Normal",
+    "poder_combate": 413
+  },
+  "114": {
+    "id": 114,
+    "nombre": "Pokemon114",
+    "tipo": "Normal",
+    "poder_combate": 414
+  },
+  "115": {
+    "id": 115,
+    "nombre": "Pokemon115",
+    "tipo": "Normal",
+    "poder_combate": 415
+  },
+  "116": {
+    "id": 116,
+    "nombre": "Pokemon116",
+    "tipo": "Normal",
+    "poder_combate": 416
+  },
+  "117": {
+    "id": 117,
+    "nombre": "Pokemon117",
+    "tipo": "Normal",
+    "poder_combate": 417
+  },
+  "118": {
+    "id": 118,
+    "nombre": "Pokemon118",
+    "tipo": "Normal",
+    "poder_combate": 418
+  },
+  "119": {
+    "id": 119,
+    "nombre": "Pokemon119",
+    "tipo": "Normal",
+    "poder_combate": 419
+  },
+  "120": {
+    "id": 120,
+    "nombre": "Pokemon120",
+    "tipo": "Normal",
+    "poder_combate": 420
+  },
+  "121": {
+    "id": 121,
+    "nombre": "Pokemon121",
+    "tipo": "Normal",
+    "poder_combate": 421
+  },
+  "122": {
+    "id": 122,
+    "nombre": "Pokemon122",
+    "tipo": "Normal",
+    "poder_combate": 422
+  },
+  "123": {
+    "id": 123,
+    "nombre": "Pokemon123",
+    "tipo": "Normal",
+    "poder_combate": 423
+  },
+  "124": {
+    "id": 124,
+    "nombre": "Pokemon124",
+    "tipo": "Normal",
+    "poder_combate": 424
+  },
+  "125": {
+    "id": 125,
+    "nombre": "Pokemon125",
+    "tipo": "Normal",
+    "poder_combate": 425
+  },
+  "126": {
+    "id": 126,
+    "nombre": "Pokemon126",
+    "tipo": "Normal",
+    "poder_combate": 426
+  },
+  "127": {
+    "id": 127,
+    "nombre": "Pokemon127",
+    "tipo": "Normal",
+    "poder_combate": 427
+  },
+  "128": {
+    "id": 128,
+    "nombre": "Pokemon128",
+    "tipo": "Normal",
+    "poder_combate": 428
+  },
+  "129": {
+    "id": 129,
+    "nombre": "Pokemon129",
+    "tipo": "Normal",
+    "poder_combate": 429
+  },
+  "130": {
+    "id": 130,
+    "nombre": "Pokemon130",
+    "tipo": "Normal",
+    "poder_combate": 430
+  },
+  "131": {
+    "id": 131,
+    "nombre": "Pokemon131",
+    "tipo": "Normal",
+    "poder_combate": 431
+  },
+  "132": {
+    "id": 132,
+    "nombre": "Pokemon132",
+    "tipo": "Normal",
+    "poder_combate": 432
+  },
+  "133": {
+    "id": 133,
+    "nombre": "Pokemon133",
+    "tipo": "Normal",
+    "poder_combate": 433
+  },
+  "134": {
+    "id": 134,
+    "nombre": "Pokemon134",
+    "tipo": "Normal",
+    "poder_combate": 434
+  },
+  "135": {
+    "id": 135,
+    "nombre": "Pokemon135",
+    "tipo": "Normal",
+    "poder_combate": 435
+  },
+  "136": {
+    "id": 136,
+    "nombre": "Pokemon136",
+    "tipo": "Normal",
+    "poder_combate": 436
+  },
+  "137": {
+    "id": 137,
+    "nombre": "Pokemon137",
+    "tipo": "Normal",
+    "poder_combate": 437
+  },
+  "138": {
+    "id": 138,
+    "nombre": "Pokemon138",
+    "tipo": "Normal",
+    "poder_combate": 438
+  },
+  "139": {
+    "id": 139,
+    "nombre": "Pokemon139",
+    "tipo": "Normal",
+    "poder_combate": 439
+  },
+  "140": {
+    "id": 140,
+    "nombre": "Pokemon140",
+    "tipo": "Normal",
+    "poder_combate": 440
+  },
+  "141": {
+    "id": 141,
+    "nombre": "Pokemon141",
+    "tipo": "Normal",
+    "poder_combate": 441
+  },
+  "142": {
+    "id": 142,
+    "nombre": "Pokemon142",
+    "tipo": "Normal",
+    "poder_combate": 442
+  },
+  "143": {
+    "id": 143,
+    "nombre": "Pokemon143",
+    "tipo": "Normal",
+    "poder_combate": 443
+  },
+  "144": {
+    "id": 144,
+    "nombre": "Pokemon144",
+    "tipo": "Normal",
+    "poder_combate": 444
+  },
+  "145": {
+    "id": 145,
+    "nombre": "Pokemon145",
+    "tipo": "Normal",
+    "poder_combate": 445
+  },
+  "146": {
+    "id": 146,
+    "nombre": "Pokemon146",
+    "tipo": "Normal",
+    "poder_combate": 446
+  },
+  "147": {
+    "id": 147,
+    "nombre": "Pokemon147",
+    "tipo": "Normal",
+    "poder_combate": 447
+  },
+  "148": {
+    "id": 148,
+    "nombre": "Pokemon148",
+    "tipo": "Normal",
+    "poder_combate": 448
+  },
+  "149": {
+    "id": 149,
+    "nombre": "Pokemon149",
+    "tipo": "Normal",
+    "poder_combate": 449
+  },
+  "150": {
+    "id": 150,
+    "nombre": "Pokemon150",
+    "tipo": "Normal",
+    "poder_combate": 450
+  },
+  "151": {
+    "id": 151,
+    "nombre": "Pokemon151",
+    "tipo": "Normal",
+    "poder_combate": 451
   }
 }

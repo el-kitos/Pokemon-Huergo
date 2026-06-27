@@ -280,4 +280,84 @@ class Pokemon:
     def __repr__(self):
         return f"| id: {self.id} - nombre: {self.nombre} - tipo: {self.tipo} - pc: {self.poder_combate}"
 
-        
+
+def bubble_sort(lista):
+    arr = lista[:]
+    n = len(arr)
+
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+    return arr
+
+def insertion_sort(lista, atributo):
+    for i in range(1, len(lista)):
+        actual = lista[i]
+        j = i - 1
+
+        if atributo == "tipo":
+            while j >= 0 and lista[j].tipo > actual.tipo:
+                lista[j + 1] = lista[j]
+                j -= 1
+
+        elif atributo == "poder_combate":
+            while j >= 0 and lista[j].poder_combate > actual.poder_combate:
+                lista[j + 1] = lista[j]
+                j -= 1
+
+        elif atributo == "nombre":
+            while j >= 0 and lista[j].nombre > actual.nombre:
+                lista[j + 1] = lista[j]
+                j -= 1
+
+        lista[j + 1] = actual
+
+    return lista
+
+def quick_sort(arr, atributo):
+    if len(arr) <= 1:
+        return arr
+
+    pivote = arr[len(arr) // 2]
+
+    if atributo == "tipo":
+        menores = [x for x in arr if x.tipo < pivote.tipo]
+        iguales = [x for x in arr if x.tipo == pivote.tipo]
+        mayores = [x for x in arr if x.tipo > pivote.tipo]
+
+    elif atributo == "poder_combate":
+        menores = [x for x in arr if x.poder_combate < pivote.poder_combate]
+        iguales = [x for x in arr if x.poder_combate == pivote.poder_combate]
+        mayores = [x for x in arr if x.poder_combate > pivote.poder_combate]
+
+    elif atributo == "nombre":
+        menores = [x for x in arr if x.nombre < pivote.nombre]
+        iguales = [x for x in arr if x.nombre == pivote.nombre]
+        mayores = [x for x in arr if x.nombre > pivote.nombre]
+
+    return quick_sort(menores, atributo) + iguales + quick_sort(mayores, atributo)
+
+
+def busqueda_lineal(arr, x):
+    for i in range(len(arr)):
+        if arr[i] == x:
+            return i
+    return -1
+
+
+def busqueda_binaria(arr, x):
+    izq = 0
+    der = len(arr) - 1
+    while izq <= der:
+        medio = (izq + der) // 2
+        if arr[medio] == x:
+            return medio
+        elif arr[medio] < x:
+            izq = medio + 1
+        else:
+            der = medio - 1
+    return -1
+
+

@@ -4,9 +4,9 @@ import json
 
 def create_pokedex_data():
     pokedex_nacional = HashMap(size =150)
-    with open("script/Pokedex_db.json", "r") as archivo:
+    with open("jsons/Pokedex_db.json", "r") as archivo:
         data = json.load(archivo)
-    
+
     for dato in data.values():
         pokemon = Pokemon(dato["id"], dato["nombre"], dato["tipo"], dato["poder_combate"])
         pokedex_nacional.agregar(pokemon.id, pokemon)
@@ -16,7 +16,7 @@ def create_pokedex_data():
 def create_medals_data():
     medallas_obtenidas = HashSet(size=8)
 
-    with open("script/Medals_db.json") as archivo:
+    with open("jsons/Medals_db.json") as archivo:
         data = json.load(archivo)
 
     medallas_obtenidas.agregar(data[0])
