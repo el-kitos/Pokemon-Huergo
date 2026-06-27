@@ -24,9 +24,4 @@ def create_medals_data():
     
     return medallas_obtenidas
 
-def main():
-    pokedex_nacional = create_pokedex_data()
-    medallas_obtenidas = create_medals_data()
-    
 
-main()

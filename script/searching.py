@@ -1,5 +1,16 @@
 from clases import busqueda_binaria, busqueda_lineal
 
+def crear_lista_ids_ordenada(pokedex):
+    ids = []
+
+    for bucket in pokedex.buckets:
+        for par in bucket:
+            pokemon = par[1]
+            ids.append(pokemon.id)
+
+    ids_ordenados = sorted(ids)
+    return ids_ordenados
+
 def busqueda_pokemon_equipo_activo(equipo_activo):
     pokemon_buscado = input("\n Que pokemon desea buscar en el equipo?: ")
     busqueda = busqueda_lineal(equipo_activo, pokemon_buscado)
@@ -9,7 +20,14 @@ def busqueda_pokemon_equipo_activo(equipo_activo):
         print("Tu pokemon no fue encontrado en el equipo, lo siento...")
     return
     
-def busqueda_pokemon_pokedex():
-    pass
+def busqueda_pokemon_pokedex(ids_ordenados, pokedex):
+    id_pokemon_buscado = input("\n Ingrese el ID del pokemon buscado: ")
+    busqueda = busqueda_binaria(ids_ordenados, id_pokemon_buscado)
+    if busqueda != -1:
+        pokemon = pokedex.buscar(id)
+        print(f"Tu pokemon fue encontrado en la posicion: {busqueda} y es {pokemon.nombre}")
+    else:
+        print("Tu pokemon no fue encontrado en el equipo, lo siento...")
+    return
 
 

@@ -14,7 +14,7 @@ def create_centro_pokemon():
     centro_pokemon = Queue()
     return centro_pokemon
 
-def deshacer_transferencia():
+def historial():
     ultimos5poke = Stack()
     return ultimos5poke
 
