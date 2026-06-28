@@ -86,6 +86,7 @@ def main():
             main_org(pc)
         elif opcion == 7:
             busqueda_pokemon_equipo_activo(equipo_activo)
+            
         elif opcion == 8:
             enviar_centro_pokemon(equipo_activo, centro_pokemon)
         elif opcion == 9:

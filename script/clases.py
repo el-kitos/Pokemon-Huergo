@@ -134,13 +134,16 @@ class SinglyLinkedList:
 
     # Recorrer e imprimir la lista
     def imprimir(self):
+        if self.cabeza is None:
+            print("La pc esta vacia.")
+            return
+        
         actual = self.cabeza
 
         while actual:
             print(actual.dato, end=" -> ")
             actual = actual.siguiente
 
-        print("La pc esta vacia.")
 
     # Devolver el tamaño de la lista
     def tamaño(self):
@@ -266,10 +269,6 @@ class Stack:
     
     def size(self):
         return len(self.stack)
-    
-    def transfer(S, T):
-        while not S.isEmpty():
-            T.push(S.pop())
         
 class Pokemon:
     def __init__(self, id, nombre, tipo, poder_combate):
