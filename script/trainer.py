@@ -42,19 +42,20 @@ def procesar_pokemon(equipo_activo, pc, pokedex_nacional):
         print("Ese pokemon no exite en la pokedex intente nuevamente")
         
 def transferir_pc_oak(pc, profe_oak, ultimos5poke):
-    pokemon = input("Que pokemon desea transferir al profesor Oak?: ")
+    pokemon = input("Que pokemon desea transferir al profesor Oak?: ").strip().lower().capitalize()
 
     actual = pc.cabeza
 
     while actual is not None:
         if actual.dato.nombre == pokemon:
-            pc.eliminar(actual.dato)
-            profe_oak.append(actual.dato)
+            pokemon_a_transferir = actual.dato
+            pc.eliminar(pokemon_a_transferir)
+            profe_oak.append(pokemon_a_transferir)
 
             if ultimos5poke.size() == 5:
                 ultimos5poke.pop()
 
-            ultimos5poke.push(actual.dato)
+            ultimos5poke.push(pokemon_a_transferir)
             return
 
         actual = actual.siguiente
@@ -65,11 +66,16 @@ def transferir_pc_oak(pc, profe_oak, ultimos5poke):
 def deshacer_utlima_transferencia(pc, profe_oak, ultimos5poke):
     if len(profe_oak) <= 0:
         print("El profesor oak no tiene ningun pokemon!")
-    else:
-        profe_oak.pop()
-        pokemon_ultimo = ultimos5poke.pop()
-        pc.agregar(pokemon_ultimo)
-        print(f"La ultima tranferencia se restablecio y asi quedo la pc: {pc}")
+        return
+
+    pokemon_ultimo = ultimos5poke.pop()
+    if pokemon_ultimo is None:
+        print("No hay transferencias recientes para deshacer.")
+        return
+
+    profe_oak.pop()
+    pc.agregar(pokemon_ultimo)
+    print(f"La ultima tranferencia se restablecio y asi quedo la pc: {pc}")
         
 
 

@@ -6,6 +6,7 @@ from trainer import create_equipo_activo, create_cajas_pc, create_centro_pokemon
 import time
 import os
 
+
 def mostrar_menu():
     print("1) Ver Pokédex")
     time.sleep(0.5)
@@ -100,5 +101,8 @@ def main():
             print("GRACIAS POR HABER JUGADO!!")
             print("Esperamos verte pronto devuelta por aqui")
             break
-        os.system("cls")
-main()
+        os.system("cls" if os.name == "nt" else "clear")
+
+
+if __name__ == "__main__":
+    main()

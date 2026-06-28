@@ -169,7 +169,7 @@ class SinglyLinkedList:
             actual = self.cabeza
 
             while actual.siguiente:
-                if actual.dato > actual.siguiente.dato:
+                if actual.dato.nombre > actual.siguiente.dato.nombre:
                     actual.dato, actual.siguiente.dato = (
                         actual.siguiente.dato,
                         actual.dato
@@ -226,7 +226,9 @@ class Queue:
         self.queue.append(item)
     
     def dequeue(self):
-        self.queue.pop(0)
+        if not self.queue:
+            return None
+        return self.queue.pop(0)
     
     def peek(self):
         print("Peek: ", self.queue[0])
@@ -249,7 +251,9 @@ class Stack:
         self.stack.append(item)
 
     def pop(self):
-        self.stack.pop()
+        if not self.stack:
+            return None
+        return self.stack.pop()
     
     def peek(self):
         print(self.stack[-1])
