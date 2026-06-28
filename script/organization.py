@@ -36,4 +36,29 @@ def organization_by_pc(pc):
     
     return pc_lista            
                 
-        
+def mostrar_menu_org():
+    print("\n--- ORGANIZAR PC ---")
+    print("1) Ordenar alfabéticamente")
+    print("2) Ordenar por tipo")
+    print("3) Ordenar por poder de combate")
+    print("4) Volver al menú principal")
+
+
+def main_org(pc):
+    mostrar_menu_org()
+    while True:
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            organization_AZ(pc)
+
+        elif opcion == "2":
+            lista = organization_by_type(pc)
+            print(lista)
+
+        elif opcion == "3":
+            lista = organization_by_pc(pc)
+            print(lista)
+
+        elif opcion == "4":
+            break

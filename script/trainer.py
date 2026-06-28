@@ -22,22 +22,21 @@ def profesor_oak():
     profe_oak = []
     return profe_oak
 
-def procesar_pokemon(equipo_activo, pc, pokedex):
+def procesar_pokemon(equipo_activo, pc, pokedex_nacional):
     while True:    
-        nombre = input("Que pokemon desea agregar al equipo activo: ")
+        nombre = input("--> Que pokemon desea capturar?: ").lower().capitalize()
         
-        for bucket in pokedex.buckets:
+        for bucket in pokedex_nacional.buckets:
             for par in bucket:
                 pokemon = par[1]
                 if pokemon.nombre == nombre :
                     if len(equipo_activo) < 6:
                         equipo_activo.append(pokemon)
-                        print("Se agrego exitosamente.")
+                        print("Se agrego exitosamente al equipo activo.")
                         
                     else:
                         pc.agregar(pokemon)
                         print("El equipo esta lleno!, Se agrego al PC")
-                        
                     return
                 
         print("Ese pokemon no exite en la pokedex intente nuevamente")
@@ -64,15 +63,28 @@ def transferir_pc_oak(pc, profe_oak, ultimos5poke):
 
         
 def deshacer_utlima_transferencia(pc, profe_oak, ultimos5poke):
-    profe_oak.pop()
-    pokemon_ultimo = ultimos5poke.pop()
-    pc.agregar(pokemon_ultimo)
-    print(f"La ultima tranferencia se restablecio y asi quedo la pc: {pc}")
-    
+    if len(profe_oak) <= 0:
+        print("El profesor oak no tiene ningun pokemon!")
+    else:
+        profe_oak.pop()
+        pokemon_ultimo = ultimos5poke.pop()
+        pc.agregar(pokemon_ultimo)
+        print(f"La ultima tranferencia se restablecio y asi quedo la pc: {pc}")
+        
 
 
-def desafiar_lider_gimnasio():
+def desafiar_lider_gimnasio(medallas_obtenidas):
     lideres = ["Brock", "Misty", "Lt. Surge", "Erika", "Koga", "Sabrina", "Blaine", "Giovanni"]
+    medallas = [
+        "Medalla Roca",
+        "Medalla Cascada",
+        "Medalla Trueno",
+        "Medalla Arcoiris",
+        "Medalla Alma",
+        "Medalla Pantano",
+        "Medalla Volcan",
+        "Medalla Tierra"
+    ]
     print("\n Bienvenido a la pelea")
     j = 0
     for i in lideres:
@@ -93,9 +105,36 @@ def desafiar_lider_gimnasio():
             break
     combate = [lideres[indice], "Usuario"]
     ganador = random.choice(combate)
+    for i in range(3):
+        print("Peleando...")
+        time.sleep(1)
     if ganador == lideres[indice]:
         print("Perdiste...")
     else:
         print("GANASTE!!")
-    
+        if medallas_obtenidas.buscar(medallas[indice]) is None:
+            medallas_obtenidas.agregar(medallas[indice])
+            print(f"Obtuviste la {medallas[indice]}.")
+        else:
+            print(f"Ya tenías la {medallas[indice]}.")
 
+        
+def enviar_centro_pokemon(equipo_activo, centro_pokemon):
+    while True:
+        nombre = input("¿Qué Pokémon desea enviar al Centro Pokémon?: ").lower().capitalize()
+
+        for pokemon in equipo_activo:
+            if pokemon.nombre == nombre:
+                equipo_activo.remove(pokemon)
+                centro_pokemon.enqueue(pokemon)
+
+                print(f"{pokemon.nombre} está siendo curado...")
+                time.sleep(1)
+
+                print(f"{pokemon.nombre} ya fue curado y volvió al equipo.")
+
+                equipo_activo.append(pokemon)
+                centro_pokemon.dequeue()  
+                return
+
+        print("Ese Pokémon no está en el equipo activo. Intente nuevamente.")

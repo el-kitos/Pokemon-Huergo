@@ -1,7 +1,7 @@
 from create_database import create_pokedex_data, create_medals_data
-from organization import organization_AZ, organization_by_type, organization_by_pc
+from organization import main_org
 from searching import crear_lista_ids_ordenada , busqueda_pokemon_equipo_activo, busqueda_pokemon_pokedex
-from trainer import create_equipo_activo, create_cajas_pc, create_centro_pokemon, historial, profesor_oak, procesar_pokemon, transferir_pc_oak, deshacer_utlima_transferencia, desafiar_lider_gimnasio
+from trainer import create_equipo_activo, create_cajas_pc, create_centro_pokemon, historial, profesor_oak, procesar_pokemon, transferir_pc_oak, deshacer_utlima_transferencia, desafiar_lider_gimnasio, enviar_centro_pokemon
 
 import time
 import os
@@ -41,19 +41,64 @@ def main():
     ultimos5poke = historial()
     profe_oak = profesor_oak()
     ids_ordenados = crear_lista_ids_ordenada(pokedex_nacional)
-    
+    print("\n --> BIENVENIDO AL MEJOR JUEGO DEL MUNDO DE POKEMON...")
     while True:
-        print("\n --> BIENVENIDO AL MEJOR JUEGO DEL MUNDO DE POKEMON...")
         time.sleep(0.5)
         print("-> A continuacion se le mostrara el menu de acciones del juego")
         time.sleep(0.5)
         mostrar_menu()
         time.sleep(1)
-        try:
-            opcion = int(input(""))
-            if opcion < 1 or opcion > 12:
-                raise IndexError
-        except:
-            pass
-            
-    
+        while True:
+            try:
+                opcion = int(input("Elija que accion realizar presionando numeros del 1 al 12: "))
+                if opcion < 1 or opcion > 12:
+                    raise IndexError
+            except ValueError:
+                print("Eso no es un numero! Intentelo nuevamente")
+            except IndexError:
+                print("Ingrese un numero del 1 al 12!")
+            else:
+                break
+        if opcion == 1:
+            pokedex_nacional.mostrar()
+            time.sleep(1)
+            input("Presione enter para volver: ")
+        elif opcion == 2:
+            if len(equipo_activo) == 0:
+                print("El equipo activo está vacío.")
+            else:
+                print("\n--- EQUIPO ACTIVO ---")
+                for pokemon in equipo_activo:
+                    print(pokemon)
+            input("Presione enter para salir: ")
+        elif opcion == 3:
+            pc.imprimir()
+            time.sleep(1)
+            input("Presione enter para volver: ")
+        elif opcion == 4:
+            medallas_obtenidas.mostrar()
+            time.sleep(1)
+            input("Presione enter para volver: ")
+        elif opcion == 5:
+            procesar_pokemon(equipo_activo, pc, pokedex_nacional)
+        elif opcion == 6:
+            main_org(pc)
+        elif opcion == 7:
+            busqueda_pokemon_equipo_activo(equipo_activo)
+        elif opcion == 8:
+            enviar_centro_pokemon(equipo_activo, centro_pokemon)
+        elif opcion == 9:
+            transferir_pc_oak(pc, profe_oak, ultimos5poke)    
+        elif opcion == 10:
+            deshacer_utlima_transferencia(pc, profe_oak, ultimos5poke)
+        elif opcion == 11:
+            if len(equipo_activo) <= 0:
+                print("No hay pokemones para pelear!!")
+            else:
+                desafiar_lider_gimnasio(medallas_obtenidas)
+        elif opcion == 12:
+            print("GRACIAS POR HABER JUGADO!!")
+            print("Esperamos verte pronto devuelta por aqui")
+            break
+        os.system("cls")
+main()

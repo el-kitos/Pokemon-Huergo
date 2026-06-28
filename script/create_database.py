@@ -4,7 +4,7 @@ import json
 
 def create_pokedex_data():
     pokedex_nacional = HashMap(size =150)
-    with open("jsons/Pokedex_db.json", "r") as archivo:
+    with open("jsons/Pokemons_db.json", "r") as archivo:
         data = json.load(archivo)
 
     for dato in data.values():

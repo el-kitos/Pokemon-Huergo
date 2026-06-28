@@ -29,7 +29,7 @@ class HashSet:
 
     def mostrar(self):
         for i in range(self.size):
-            print(i, ":", self.buckets[i])
+            print(i, ":" , self.buckets[i])
 
 class HashMap:
 
@@ -140,7 +140,7 @@ class SinglyLinkedList:
             print(actual.dato, end=" -> ")
             actual = actual.siguiente
 
-        print("None")
+        print("La pc esta vacia.")
 
     # Devolver el tamaño de la lista
     def tamaño(self):
@@ -342,7 +342,7 @@ def quick_sort(arr, atributo):
 
 def busqueda_lineal(arr, x):
     for i in range(len(arr)):
-        if arr[i] == x:
+        if arr[i].nombre == x:
             return i
     return -1
 
