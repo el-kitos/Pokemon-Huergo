@@ -1,0 +1,47 @@
+Análisis de complejidad y eficiencia del sistema
+=============================================
+
+1) Complejidad temporal de insertar un Pokémon en el Equipo Principal versus en la PC
+
+- Equipo Principal: se implementa como una lista de Python. Agregar un elemento al final tiene complejidad temporal amortizada O(1), porque Python reserva espacio adicional y, en la mayoría de los casos, no necesita mover todos los elementos existentes.
+- PC: en una lista enlazada, insertar al inicio tiene complejidad O(1), ya que solo se actualiza el puntero del nuevo nodo hacia la cabeza y la cabeza pasa a apuntar al nuevo elemento. En cambio, si se agregara al final de una lista enlazada simple, la complejidad sería O(n), porque habría que recorrer todos los nodos hasta llegar al último.
+
+Por lo tanto, desde un punto de vista teórico:
+- Array/lista convencional al final: O(1) amortizado.
+- Lista enlazada al inicio: O(1).
+- Lista enlazada al final: O(n).
+
+En este proyecto, el Equipo Principal se beneficia de la inserción rápida al final, mientras que la PC, si se pensara como una lista enlazada simple, tendría mejores prestaciones al insertar al inicio que al final.
+
+2) ¿Por qué la Pokédex se implementó con un Hash Map?
+
+La Pokédex se implementó con un Hash Map porque la búsqueda de un Pokémon debe realizarse de forma rápida y directa a partir de una clave única, que en este caso es el ID del Pokémon. Un Hash Map permite recuperar un valor en tiempo promedio O(1), gracias al uso de una función hash que transforma la clave en un índice del arreglo interno.
+
+Esto es mucho más eficiente que una lista convencional de Python, donde buscar un elemento implica recorrer los datos uno por uno. En una lista, la búsqueda lineal tiene complejidad O(n). Si la Pokédex tuviera 151 Pokémon, la diferencia no sería dramática a simple vista, pero en términos de diseño y escalabilidad sí es importante: un Hash Map mantiene la búsqueda constante en promedio, mientras que una lista tradicional crece linealmente en tiempo a medida que aumenta la cantidad de datos.
+
+Además, el uso de un Hash Map encaja muy bien con la lógica del juego porque:
+- cada Pokémon tiene un ID único;
+- se necesita acceder a los datos directamente por ese identificador;
+- la estructura evita recorrer toda la Pokédex cada vez que se consulta un Pokémon.
+
+En resumen, la elección del Hash Map se justifica por la necesidad de búsquedas rápidas, consistentes y escalables, algo esencial si la base de datos de Pokémon crece.
+
+3) Rendimiento teórico de Bubble Sort versus Quick Sort para 6.000 Pokémon
+
+Si la PC contiene 6.000 Pokémon capturados y se ordena con Bubble Sort:
+- el peor caso es cuando la lista está completamente desordenada en orden inverso;
+- la complejidad temporal es O(n^2);
+- para n = 6000, esto implica aproximadamente 18.000.000 comparaciones y un número similar de intercambios en el peor caso.
+
+Por otro lado, Quick Sort:
+- tiene complejidad promedio O(n log n);
+- en el peor caso, cuando el pivote siempre queda en un extremo (por ejemplo, una lista ya ordenada o invertida y se elige como pivote el primer o último elemento), su complejidad también puede ser O(n^2);
+- sin embargo, en la práctica, para datos aleatorios o con una selección de pivote más equilibrada, suele ser mucho más rápido que Bubble Sort.
+
+Para 6.000 elementos:
+- Bubble Sort sería muy costoso en tiempo, porque su crecimiento cuadrático se vuelve muy evidente.
+- Quick Sort, en promedio, sería considerablemente más eficiente y manejaría la tarea con muchísima mejor performance.
+
+Conclusión:
+- Bubble Sort: simple, pero poco eficiente para volúmenes grandes.
+- Quick Sort: mucho mejor opción para ordenar una gran cantidad de datos como 6.000 Pokémon.

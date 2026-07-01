@@ -23,6 +23,7 @@ def profesor_oak():
     return profe_oak
 
 def procesar_pokemon(equipo_activo, pc, pokedex_nacional):
+    print("[SISTEMA DE CAPTURA]")
     while True:    
         nombre = input("--> Que pokemon desea capturar?: ").lower().capitalize()
         
@@ -36,7 +37,8 @@ def procesar_pokemon(equipo_activo, pc, pokedex_nacional):
                         
                     else:
                         pc.agregar(pokemon)
-                        print("El equipo esta lleno!, Se agrego al PC")
+                        print("El equipo esta lleno(6/6)!")
+                        print("Derivando a Almacenamiento de PC... Registro añadido exitosamente.")
                     return
                 
         print("Ese pokemon no exite en la pokedex intente nuevamente")
@@ -51,6 +53,7 @@ def transferir_pc_oak(pc, profe_oak, ultimos5poke):
             pokemon_a_transferir = actual.dato
             pc.eliminar(pokemon_a_transferir)
             profe_oak.append(pokemon_a_transferir)
+            print(f"{pokemon_a_transferir.nombre} ha sido transferido al profesor Oak.")
 
             if ultimos5poke.size() == 5:
                 ultimos5poke.pop()
@@ -64,6 +67,7 @@ def transferir_pc_oak(pc, profe_oak, ultimos5poke):
 
         
 def deshacer_utlima_transferencia(pc, profe_oak, ultimos5poke):
+    print("Deshaciendo la última transferencia...")
     if len(profe_oak) <= 0:
         print("El profesor oak no tiene ningun pokemon!")
         return
@@ -75,6 +79,7 @@ def deshacer_utlima_transferencia(pc, profe_oak, ultimos5poke):
 
     profe_oak.pop()
     pc.agregar(pokemon_ultimo)
+    time.sleep(1)
     print(f"La ultima tranferencia se restablecio y asi quedo la pc: {pc}")
         
 
@@ -126,9 +131,11 @@ def desafiar_lider_gimnasio(medallas_obtenidas):
 
         
 def enviar_centro_pokemon(equipo_activo, centro_pokemon):
+    print("[CENTRO POKÉMON - COLA DE SANACIÓN]")
     while True:
         nombre = input("¿Qué Pokémon desea enviar al Centro Pokémon?: ").lower().capitalize()
-
+        print(|f"Enviando a", {nombre}, "al Centro Pokémon...")
+        time.sleep(1)
         for pokemon in equipo_activo:
             if pokemon.nombre == nombre:
                 equipo_activo.remove(pokemon)
