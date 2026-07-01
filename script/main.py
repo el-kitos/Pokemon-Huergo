@@ -61,7 +61,25 @@ def main():
             else:
                 break
         if opcion == 1:
-            pokedex_nacional.mostrar()
+            print("Bienvenido a la POKEDEX NACIONAL")
+            print("1) Buscar Pokémon por ID")
+            print("2) Ver todos los Pokémones")
+            while True:
+                try:
+                    sub_opcion = int(input("Elija que accion realizar presionando numeros del 1 al 2: "))
+                    if sub_opcion < 1 or sub_opcion > 2:
+                        raise IndexError
+                except ValueError:
+                    print("Eso no es un numero! Intentelo nuevamente")
+                except IndexError:
+                    print("Ingrese un numero del 1 al 2!")
+                else:
+                    break
+            if sub_opcion == 1:
+                busqueda_pokemon_pokedex(ids_ordenados, pokedex_nacional)
+            else:
+                print("Mostrando todos los Pokémones de la POKEDEX NACIONAL...")
+                pokedex_nacional.mostrar()
             time.sleep(1)
             input("Presione enter para volver: ")
         elif opcion == 2:

@@ -20,13 +20,21 @@ def busqueda_pokemon_equipo_activo(equipo_activo):
         print("Tu pokemon no fue encontrado en el equipo, lo siento...")
     
 def busqueda_pokemon_pokedex(ids_ordenados, pokedex):
-    id_pokemon_buscado = input("\n Ingrese el ID del pokemon buscado: ")
+    try:
+        id_pokemon_buscado = int(input("\nIngrese el ID del pokemon buscado: ").strip())
+    except ValueError:
+        print("Debe ingresar un número válido.")
+        return None
+
     busqueda = busqueda_binaria(ids_ordenados, id_pokemon_buscado)
     if busqueda != -1:
-        pokemon = pokedex.buscar(id)
-        print(f"Tu pokemon fue encontrado en la posicion: {busqueda} y es {pokemon.nombre}")
+        pokemon = pokedex.buscar(id_pokemon_buscado)
+        if pokemon is not None:
+            print(f"Tu pokemon fue encontrado en la posicion: {busqueda} y es {pokemon.nombre}")
+            return pokemon
+        print("No se pudo encontrar el Pokémon en la pokedex.")
     else:
-        print("Tu pokemon no fue encontrado en el equipo, lo siento...")
-    return
+        print("Tu pokemon no fue encontrado en la pokedex, lo siento...")
+    return None
 
 
