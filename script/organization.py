@@ -2,11 +2,19 @@ from clases import Pokemon, SinglyLinkedList, Queue, Stack, bubble_sort, inserti
 import json
 
 def organization_AZ(pc):
-    if pc.tamaño() != 0:
-        pc.ordenar()
-    else:
+    if pc.tamaño() == 0:
         print("La lista esta vacia!")
-        return
+        return []
+
+    pc_lista = []
+    actual = pc.cabeza
+
+    while actual is not None:
+        pc_lista.append(actual.dato)
+        actual = actual.siguiente
+
+    pc_lista = insertion_sort(pc_lista, "nombre")
+    return pc_lista
 
 def organization_by_type(pc):
     if pc.tamaño() == 0:
