@@ -53,12 +53,13 @@ def mostrar_menu_org():
 
 
 def main_org(pc):
-    mostrar_menu_org()
     while True:
+        mostrar_menu_org()
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
-            organization_AZ(pc)
+            lista = organization_AZ(pc)
+            print(lista)
 
         elif opcion == "2":
             lista = organization_by_type(pc)
@@ -70,3 +71,5 @@ def main_org(pc):
 
         elif opcion == "4":
             break
+        else:
+            print("Opción inválida. Intente nuevamente.")

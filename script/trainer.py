@@ -123,7 +123,7 @@ def desafiar_lider_gimnasio(medallas_obtenidas):
         print("Perdiste...")
     else:
         print("GANASTE!!")
-        if medallas_obtenidas.buscar(medallas[indice]) is None:
+        if not medallas_obtenidas.buscar(medallas[indice]):
             medallas_obtenidas.agregar(medallas[indice])
             print(f"Obtuviste la {medallas[indice]}.")
         else:
@@ -134,7 +134,7 @@ def enviar_centro_pokemon(equipo_activo, centro_pokemon):
     print("[CENTRO POKÉMON - COLA DE SANACIÓN]")
     while True:
         nombre = input("¿Qué Pokémon desea enviar al Centro Pokémon?: ").lower().capitalize()
-        print(|f"Enviando a", {nombre}, "al Centro Pokémon...")
+        print(f"Enviando a {nombre} al Centro Pokémon...")
         time.sleep(1)
         for pokemon in equipo_activo:
             if pokemon.nombre == nombre:
